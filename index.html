@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .image-container {
+            display: flex;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            width: 100%;
+            height: 100vh;
+        }
+        .image-container img {
+            flex-shrink: 0;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <!-- Add images dynamically using JavaScript -->
+    </div>
+    <script>
+        const imageContainer = document.querySelector('.image-container');
+        for (let i = 1; i <= 100; i++) {
+            const img = document.createElement('img');
+            img.src = `/images/image${i}.jpg`;
+            img.alt = `Image ${i}`;
+            imageContainer.appendChild(img);
+        }
+    </script>
+</body>
+</html>
 
